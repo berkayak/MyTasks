@@ -76,7 +76,7 @@ class TodoActivity : AppCompatActivity() {
         var newName = todoItemNameET.text.toString()
 
         //VALIDATION
-        if (newName.isNullOrEmpty() || !todoVM.checkName(newName)){
+        if (newName.isNullOrEmpty()){
             Snackbar.make(findViewById(android.R.id.content), R.string.empty_fields, Snackbar.LENGTH_LONG).show()
             return@OnClickListener
         }

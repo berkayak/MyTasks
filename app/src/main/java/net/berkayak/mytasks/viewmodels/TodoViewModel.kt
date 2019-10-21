@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import net.berkayak.mytasks.data.model.Todo
+import net.berkayak.mytasks.data.repository.TodoItemRepository
 import net.berkayak.mytasks.data.repository.TodoRepository
 import net.berkayak.mytasks.utilities.TodoHelper
 import org.json.JSONArray

@@ -2,10 +2,6 @@ package net.berkayak.mytasks.data.repository
 
 import android.app.Application
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 import net.berkayak.mytasks.data.AppDatabase
 import net.berkayak.mytasks.data.model.User
 import net.berkayak.mytasks.data.model.UserDAO
