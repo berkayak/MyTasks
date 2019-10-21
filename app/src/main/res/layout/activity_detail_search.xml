@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DetailSearchActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/paddingL">
+
+        <CheckBox
+            android:id="@+id/completedCB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textSize="@dimen/normalText"
+            android:text="@string/done"/>
+
+        <CheckBox
+            android:id="@+id/notCompletedCB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textSize="@dimen/normalText"
+            android:text="@string/not_completed"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/paddingL">
+
+        <CheckBox
+            android:id="@+id/expiredCB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textSize="@dimen/normalText"
+            android:text="@string/expired"/>
+
+        <CheckBox
+            android:id="@+id/notExpiredCB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textSize="@dimen/normalText"
+            android:text="@string/not_expired"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/paddingL">
+
+        <EditText
+            android:id="@+id/nameFilterET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/normalText"
+            android:hint="@string/todo_name"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/paddingL"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/filterBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/normalText"
+            android:background="@color/colorAccent"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:paddingRight="@dimen/paddingL"
+            android:paddingLeft="@dimen/paddingL"
+            android:text="@string/filte_it"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/paddingL"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/clearFilterBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/normalText"
+            android:background="@color/colorAccent"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:paddingRight="@dimen/paddingL"
+            android:paddingLeft="@dimen/paddingL"
+            android:text="@string/clear_filters"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+</LinearLayout>

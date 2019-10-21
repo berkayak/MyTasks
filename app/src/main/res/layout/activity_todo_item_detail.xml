@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.TodoItemDetailActivity"
+    android:padding="@dimen/paddingS"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/todoItemNameET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_shadow_end_color"
+        android:hint="@string/todo_name"
+        android:padding="@dimen/paddingXS"
+        android:layout_marginBottom="@dimen/paddingL"/>
+
+    <EditText
+        android:id="@+id/todoItemDescriptionET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_shadow_end_color"
+        android:singleLine="false"
+        android:lines="2"
+        android:hint="@string/todo_item_description"
+        android:padding="@dimen/paddingXS"
+        android:gravity="left|top"
+        android:layout_marginBottom="@dimen/paddingL"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/cardview_shadow_end_color"
+        android:layout_marginBottom="@dimen/paddingL"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/todoItemDeadlineTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/largeText"
+            android:padding="@dimen/paddingXS"
+            android:hint="@string/deadline"
+            android:layout_weight="0.8"/>
+
+        <ImageButton
+            android:id="@+id/selectDateIB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/calendar"
+            android:padding="@dimen/paddingXS"
+            android:background="@color/trans"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/saveBTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:padding="@dimen/paddingXS"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/paddingL"/>
+
+
+</LinearLayout>

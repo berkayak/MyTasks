@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">MyTasks</string>
+    <string name="user_name">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="password_again">Password Again</string>
+    <string name="register">Register</string>
+    <string name="check_fields">Please check your Login Informations</string>
+    <string name="click_for_register">Click here for register</string>
+    <string name="created_date">"Created:  "</string>
+    <string name="expire_date">"Expire:  "</string>
+    <string name="todo_list_name">Todo List Name</string>
+    <string name="empty_fields">There is an empty fields!</string>
+    <string name="todo_name">Todo Name</string>
+    <string name="select">Select</string>
+    <string name="save">Save</string>
+    <string name="deadline">Deadline</string>
+    <string name="add">New</string>
+    <string name="new_item">New Item</string>
+    <string name="todo_item_description">Description</string>
+    <string name="search">Search</string>
+    <string name="sort">Sort</string>
+    <string name="detail_search">Detail Search</string>
+    <string name="done">Completed</string>
+    <string name="not_completed">Not Completed</string>
+    <string name="clear_filters">Clear Filters</string>
+    <string name="filte_it">Filter it!</string>
+    <string name="not_expired">Not Expired</string>
+    <string name="expired">Expired</string>
+</resources>

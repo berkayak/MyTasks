@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/paddingXS"
+    android:padding="@dimen/paddingXS"
+    android:gravity="center_vertical"
+    android:background="@color/cardview_shadow_end_color">
+
+    <TextView
+        android:id="@+id/todoItemStatusTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/normalText"
+        android:textAlignment="textEnd" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/todoItemNameTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/normalText" />
+
+        <ImageButton
+            android:id="@+id/todoItemEditIB"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/edit_black"
+            android:background="@color/trans"
+            android:scaleType="fitCenter"/>
+
+        <ImageButton
+            android:id="@+id/todoItemDeleteIB"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/delete"
+            android:background="@color/trans"
+            android:scaleType="fitCenter"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/todoItemDescriptionTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/normalText"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/normalText"
+            android:text="@string/created_date" />
+
+        <TextView
+            android:id="@+id/todoItemCreateDateTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/normalText"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/normalText"
+            android:text="@string/expire_date"/>
+
+        <TextView
+            android:id="@+id/todoItemDeadlineTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/normalText"/>
+
+    </LinearLayout>
+</LinearLayout>

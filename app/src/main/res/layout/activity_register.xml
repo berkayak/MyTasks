@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.RegisterActivity"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/userNameET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="320dp"
+        android:textSize="@dimen/normalText"
+        android:hint="@string/user_name"/>
+
+    <EditText
+        android:id="@+id/passwordET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="320dp"
+        android:textSize="@dimen/normalText"
+        android:hint="@string/password"
+        android:inputType="numberPassword"/>
+
+    <EditText
+        android:id="@+id/passwordApproveET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="320dp"
+        android:textSize="@dimen/normalText"
+        android:hint="@string/password_again"
+        android:inputType="numberPassword"/>
+
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/MyTasksDefaultButton"
+        android:layout_marginTop="@dimen/paddingM"
+        android:text="@string/register"/>
+
+</LinearLayout>
