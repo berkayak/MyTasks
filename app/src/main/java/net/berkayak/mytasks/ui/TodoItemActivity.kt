@@ -1,10 +1,13 @@
 package net.berkayak.mytasks.ui
 
+import android.content.DialogInterface
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_todo_item.*
@@ -67,6 +70,41 @@ class TodoItemActivity : AppCompatActivity() {
         startActivityForResult(i, REQUEST_CODE_FILTER)
     }
 
+    //OPEN SORT DIALOG AND SORTS BY CHOICE
+    private fun openSortDialog(){
+        var dialogBuilder = AlertDialog.Builder(this)
+        dialogBuilder.setTitle(R.string.choice_criterion)
+        dialogBuilder.setCancelable(true)
+        dialogBuilder.setSingleChoiceItems(R.array.sort_choice, 0, DialogInterface.OnClickListener{ dialog, which ->
+            when(which){
+                0 -> { //order by name
+                    (todoItemRV.adapter as TodoItemRecyclerviewAdapter).setDataSource(todoItemVM.getByFilter()?.sortedBy { it -> it.name })
+                }
+                1 -> {
+                    (todoItemRV.adapter as TodoItemRecyclerviewAdapter).setDataSource(todoItemVM.getByFilter()?.sortedBy { it -> it.createDate })
+                }
+                2 -> {
+                    (todoItemRV.adapter as TodoItemRecyclerviewAdapter).setDataSource(todoItemVM.getByFilter()?.sortedBy { it -> it.deadLine })
+                }
+                3 -> {
+                    (todoItemRV.adapter as TodoItemRecyclerviewAdapter).setDataSource(todoItemVM.getByFilter()?.sortedBy { it -> it.completed })
+                }
+            }
+            dialog.dismiss()
+        })
+        dialogBuilder.show()
+    }
+
+    private fun sendEmail(){
+        var emailIntent = Intent(Intent.ACTION_SEND)
+        emailIntent.setData(Uri.parse("mailto:"))
+        emailIntent.setType("text/plain")
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "TODO LIST")
+        emailIntent.putExtra(Intent.EXTRA_TEXT, todoItemVM.getJsonList().toString())
+        emailIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK) // this will make such that when user returns to your app, your app is displayed, instead of the email app.
+        startActivity(emailIntent)
+    }
+
     private var rvClickListener = object : RecyclerviewClickListener {
         override fun onClick(viewId: Int, itemId: Int, pos: Int) {
             when(viewId){
@@ -79,7 +117,6 @@ class TodoItemActivity : AppCompatActivity() {
                 R.id.todoItemDeleteIB -> {
                     todoItemVM.delete(todoItemVM.getByID(itemId)!!)
                 }
-
             }
         }
     }
@@ -102,7 +139,7 @@ class TodoItemActivity : AppCompatActivity() {
 
     //CREATE MENU
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.detail_menu, menu)
+        menuInflater.inflate(R.menu.todo_item_activity_menu, menu)
 
         var searchItem = menu!!.findItem(R.id.searchItemBTN)
         var searchView = searchItem.actionView as androidx.appcompat.widget.SearchView?
@@ -120,10 +157,15 @@ class TodoItemActivity : AppCompatActivity() {
             R.id.detailSearchBTN -> {
                 startDetailSearchActivity()
             }
+            R.id.itemSortBTN -> {
+                openSortDialog()
+            }
+            R.id.sendEmailBTN -> {
+                sendEmail()
+            }
         }
         return true
     }
-
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)

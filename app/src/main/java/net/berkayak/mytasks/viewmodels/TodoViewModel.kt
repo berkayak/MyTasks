@@ -6,6 +6,8 @@ import androidx.lifecycle.LiveData
 import net.berkayak.mytasks.data.model.Todo
 import net.berkayak.mytasks.data.repository.TodoRepository
 import net.berkayak.mytasks.utilities.TodoHelper
+import org.json.JSONArray
+import org.json.JSONObject
 
 class TodoViewModel(application: Application, userID: Int): AndroidViewModel(application) {
     private val repo = TodoRepository(application, userID)
@@ -32,4 +34,5 @@ class TodoViewModel(application: Application, userID: Int): AndroidViewModel(app
     fun checkName(name: String): Boolean{
         return todos.value?.find { it -> it.name == name } == null
     }
+
 }

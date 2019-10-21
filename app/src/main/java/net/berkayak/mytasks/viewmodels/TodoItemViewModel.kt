@@ -9,6 +9,8 @@ import net.berkayak.mytasks.data.model.TodoItem
 import net.berkayak.mytasks.data.repository.TodoItemRepository
 import net.berkayak.mytasks.utilities.Consts
 import net.berkayak.mytasks.utilities.TodoHelper
+import org.json.JSONArray
+import org.json.JSONObject
 
 class TodoItemViewModel(application: Application, todoID: Int): AndroidViewModel(application) {
     private val repo = TodoItemRepository(application, todoID)
@@ -63,4 +65,20 @@ class TodoItemViewModel(application: Application, todoID: Int): AndroidViewModel
         }
         return filteredList?.toList()
     }
+
+    fun getJsonList(): JSONArray{
+        var li = todoItems.value
+        var jList = JSONArray()
+        li?.forEach {
+            var obj = JSONObject()
+            obj.put("name", it.name)
+            obj.put("description", it.description)
+            obj.put("createDate", TodoHelper.getDateTime(it.createDate))
+            obj.put("expireDate", TodoHelper.getDateTime(it.deadLine))
+            obj.put("completed", it.completed)
+            jList.put(obj)
+        }
+        return jList
+    }
+
 }

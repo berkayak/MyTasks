@@ -25,4 +25,9 @@
         android:title="@string/detail_search"
         android:icon="@drawable/ic_search"/>
 
+    <item
+        android:id="@+id/sendEmailBTN"
+        app:showAsAction="never"
+        android:title="@string/send_email"/>
+
 </menu>

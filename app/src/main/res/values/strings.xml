@@ -27,4 +27,14 @@
     <string name="filte_it">Filter it!</string>
     <string name="not_expired">Not Expired</string>
     <string name="expired">Expired</string>
+    <string name="choice_criterion">Cohice criterion</string>
+    <string name="send_email">Send e-mail</string>
+
+
+    <array name="sort_choice">
+        <item>Name</item>
+        <item>Create Date</item>
+        <item>Deadline</item>
+        <item>Status</item>
+    </array>
 </resources>
