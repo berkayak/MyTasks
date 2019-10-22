@@ -1,5 +1,5 @@
 ### Todo App
-##### My Tasks is basic To-Do app. You can create lists, and add item into lists. Every item has name, description, deadline, created date, and status. You can edit or delete existing items. There is the option for filter and sort the items. Also you can export items with Json format. There is application flow below.
+##### My Tasks is basic To-Do app. The application was designed with MVVM architecture. You can create lists, and add item into lists. Every item has name, description, deadline, created date, and status. You can edit or delete existing items. There is the option for filter and sort the items. Also you can export items with Json format. There is application flow below.
 
 
 #### First screen is Login. If you have a credentials you may login.
