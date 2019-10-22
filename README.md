@@ -1,5 +1,10 @@
+### Todo App
+##### My Tasks is basic To-Do app. You can create lists, and add item into lists. Every item has name, description, deadline, created date, and status. You can edit or delete existing items. There is the option for filter and sort the items. Also you can export items with Json format. There is application flow below.
+
+
 #### First screen is Login. If you have a credentials you may login.
 ![Screenshot](https://raw.githubusercontent.com/berkayak/MyTasks/master/screenshots/login.png)
+
 
 #### If you don't have any credentials you should register first.
 ![Screenshot](https://raw.githubusercontent.com/berkayak/MyTasks/master/screenshots/register.png)
