@@ -77,16 +77,16 @@ class TodoItemActivity : AppCompatActivity() {
         dialogBuilder.setCancelable(true)
         dialogBuilder.setSingleChoiceItems(R.array.sort_choice, 0, DialogInterface.OnClickListener{ dialog, which ->
             when(which){
-                0 -> { //order by name
+                0 -> { //ORDER BY NAME
                     (todoItemRV.adapter as TodoItemRecyclerviewAdapter).setDataSource(todoItemVM.getByFilter()?.sortedBy { it -> it.name })
                 }
-                1 -> {
+                1 -> { //ORDER BY CREATE DATE
                     (todoItemRV.adapter as TodoItemRecyclerviewAdapter).setDataSource(todoItemVM.getByFilter()?.sortedBy { it -> it.createDate })
                 }
-                2 -> {
+                2 -> { //ORDER BY DEADLINE
                     (todoItemRV.adapter as TodoItemRecyclerviewAdapter).setDataSource(todoItemVM.getByFilter()?.sortedBy { it -> it.deadLine })
                 }
-                3 -> {
+                3 -> { //ORDER BY STATUS
                     (todoItemRV.adapter as TodoItemRecyclerviewAdapter).setDataSource(todoItemVM.getByFilter()?.sortedBy { it -> it.completed })
                 }
             }
@@ -95,7 +95,8 @@ class TodoItemActivity : AppCompatActivity() {
         dialogBuilder.show()
     }
 
-    private fun sendEmail(){
+    //EXPORTS LİST
+    private fun exportList(){
         var emailIntent = Intent(Intent.ACTION_SEND)
         emailIntent.setData(Uri.parse("mailto:"))
         emailIntent.setType("text/plain")
@@ -161,7 +162,7 @@ class TodoItemActivity : AppCompatActivity() {
                 openSortDialog()
             }
             R.id.sendEmailBTN -> {
-                sendEmail()
+                exportList()
             }
         }
         return true
