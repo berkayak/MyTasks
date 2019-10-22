@@ -21,28 +21,25 @@ For add new todo items you should select any list.
 
 
 ### After clicked any list, you will see items which before added to list.
-<br/>
+<br/> 
 For mark as done or not just click the items.
-<br/>
+<br/> 
 For delete or edit click the icons on the items.
-<br/>
+<br/> 
 For add new item use the menu.
 <br/>
 ![Screenshot](https://raw.githubusercontent.com/berkayak/MyTasks/master/screenshots/todoItems.png)
-<br/> <br/> <br/> <br/>
 
 
 ### Fill the fields and click 'Save'
-<br/>
+<br/> 
 Then you will return the items screens
-<br/>
+<br/> 
 ![Screenshot](https://raw.githubusercontent.com/berkayak/MyTasks/master/screenshots/addNew.png)
-<br/><br/><br/><br/>
+
 
 ### If you want filter the items access Filter screen via menu
 ![Screenshot](https://raw.githubusercontent.com/berkayak/MyTasks/master/screenshots/filter.png)
-<br/> <br/> <br/>
+<br/>
 The filter stays on the list. To remove filter, access filter screen and press the 'clear filters'
 <br/><br/><br/><br/>
-
-
